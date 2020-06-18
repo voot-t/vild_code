@@ -1,0 +1,10 @@
+demo   12, step  500, return 276.000000, return_ratio 0.552000
+demo  223, step  502, return 120.000000, return_ratio 0.239044
+demo  904, step  502, return 203.000000, return_ratio 0.404382
+demo  640, step  505, return 102.000000, return_ratio 0.201980
+demo  397, step  506, return 253.000000, return_ratio 0.500000
+demo  681, step  507, return 312.000000, return_ratio 0.615385
+demo  795, step  507, return 103.000000, return_ratio 0.203156
+demo  442, step  509, return 81.000000, return_ratio 0.159136
+demo  291, step  511, return 180.000000, return_ratio 0.352250
+demo  580, step  511, return 318.000000, return_ratio 0.622309
