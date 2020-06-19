@@ -20,8 +20,9 @@ Important files are
 * code/core/irl.py - Script implementing classes of IRL/GAIL baselines. 
 * code/core/ac.py - Script implementing classes of RL algorithms (TRPO, PPO, SAC).
 
-Experiments with RL-based IL methods is run via vild_main.py. To change algorithms, set argument --il_method *algorithm_name*.
+Experiments with RL-based IL methods is run via vild_main.py. To set algorithms, set argument --il_method *algorithm_name*.
 *algorithm_name* can be as follows: vild, irl (This is maxent-irl), gail, airl, vail, infogail.
+Without setting --il_method, the default behavior of the code is to run TRPO to perform RL.
 
 To use log-sigmoid reward function for VILD, set argument --vild_loss_type BCE
 
