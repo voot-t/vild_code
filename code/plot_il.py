@@ -179,8 +179,8 @@ def plot(args):
         args.gp_lambda = 0
 
     if args.env_id == 21:
-        # plot_methods = ["vild_per0", "vild_per2", "gail", "infogail_mean", "infogail_best", "meirl", "airl", "vail"]
-        plot_methods = ["vild_per2", "gail", "meirl", "airl", "vail"]
+        plot_methods = ["vild_per0", "vild_per2", "gail", "infogail_mean", "infogail_best", "meirl", "airl", "vail"]    # for paper 
+        # plot_methods = ["vild_per2", "gail", "meirl", "airl", "vail"]   # for slide
         args.vild_loss_type = "bce"
         env_name += "_reach" 
         args.hidden_size = (100, 100)
@@ -626,11 +626,8 @@ def plot(args):
     if args.env_id == 21:
         title = "%s" % ("RobosuiteReacher")
         plot_name = "%s_%s" % (args.rl_method, env_name )
-        # ax.set_ylim([-10, 45])  # paper
-        ax.set_ylim([-2.4, 29])    # spotlight
-        # if "infogail_best" in plot_methods:
-        # else:
-        #     ax.set_ylim([0, 35])
+        ax.set_ylim([-10, 45])  # paper
+        # ax.set_ylim([-2.4, 29])    # slide 
             
     if args.env_id == 15:
         title = "%s" % ("AntBullet")        
@@ -930,10 +927,10 @@ def plot(args):
 
         if args.env_id == 21:
             title = "%s" % ("RobosuiteReacher")
-            ax_3.set_ylim([-10, 45])
-            # if "infogail_best" in plot_methods:
-            # else:
-            #     ax.set_ylim([0, 35])
+            if "infogail_best" in plot_methods:
+                ax_3.set_ylim([-10, 45])    # for paper
+            else:
+                ax_3.set_ylim([0, 35])        # for slide 
             
         if plot_large:
             plt.title(title + " (InfoGAIL)", fontsize=fontsize+1)
