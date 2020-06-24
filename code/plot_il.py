@@ -7,8 +7,13 @@ from core.ac import *
 from core.irl import *
 from core.vild import *
 
+import matplotlib 
 import matplotlib.pyplot as plt
 import pylab
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
+# matplotlib.rcParams['text.usetex'] = True
+
 #from https://tonysyu.github.io/plotting-error-bars.html#.WRwXWXmxjZs
 def errorfill(x, y, yerr, color=None, alpha_fill=0.15, ax=None, linestyle="-", linewidth = None, label=None, shade=True):
 
@@ -189,8 +194,6 @@ def plot(args):
 
     if args.env_id == 15:
         plot_methods = ["vild_per2", "gail", "meirl"]
-        # args.hidden_size = (100, 100)
-        # args.activation = "tanh"
 
     R_test_all = []
     gail_legend = []
@@ -636,7 +639,7 @@ def plot(args):
     if plot_large: 
         fig_name += "_large"
     
-    fig_name += "_slide"
+    # fig_name += "_slide"
     print(fig_name) 
 
     if plot_large:
